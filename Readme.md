@@ -54,8 +54,6 @@ DesainPemograman-Semester3/
    java latihan1
    ```
 
-*(Sesuaikan dengan nama file dan bahasa pemrograman yang digunakan)*
-
 ---
 
 ## 🖼️ Dokumentasi Visual
