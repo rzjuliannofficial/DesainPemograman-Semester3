@@ -1,0 +1,26 @@
+body{
+    background: url('/CSS/img/bunga2.jpg'), url('/CSS/img/bunga1.jpg');
+    background-repeat: no-repeat, repeat;
+    color: white;
+}
+
+h2 {
+    color: orange;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+}
+
+.Kotak {
+    padding: 50px;
+    width: 100px;
+    color: white;
+    margin: 10px;
+    background-color: orange;
+}
+
+#Kotak {
+    width: 400px;
+    color: white;
+    background-color: blue;
+    padding: 50px;
+}
