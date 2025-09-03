@@ -13,24 +13,64 @@
         element tidak dipengaruhi oleh properti seperti top, bottom , left, dan right.;
     </p>
     
-    <div class="static"></div>
+    <div class="static">
+        Element ini diatur menggunakan posisi: static;
+    </div>
     <br><br><br><br>
-    <h2></h2>
-    <p></p>
-    <div class="relativ"></div>
+    <h2>position: relative;</h2>
+
+    <p>sebuah elemnt HTML yang menggunakan positon relative akan terletak pada posisi normal.
+        mengatur properti atas , kanan, bawah , dan kiri dari element yang diposisikan dengan "relatif"
+        akan membuatnya jauh dari posisi normalnya.
+        konten lain tidak akan disesuaikan agar sesuai dengan celah yang ditinggalkan oleh elemen tersebut.:
+    </p>
+
+
+    <div class="relativ">Element ini diatur menggunakan posisi: relative;</div>
     <br><br><br>
-    <h2></h2>
-    <p></p>
-    <div class="fixed"></div>
+    <h2>position: fixed;</h2>
+    <p>Sebuah elemen HTML yang di setting dengan position fixed akan memiliki sifat tetap, 
+        tanpa ada perubahan bahkan jika halaman website di scroll.
+        Berlaku pengaturan left, bottom , top dan right pada position fixed:
+    </p>
+
+    <div class="fixed">
+        Element ini diatur menggunakan posisi: fixed;
+    </div>
     <br><br><br>
     <br><br><br>
     <br><br><br>
     <br><br><br>
     <br><br><br>
-    <h2></h2>
-    <p></p>
-    <div class="relative1">
-        <div class="absolute"></div>
+
+    <h2>posistion: absolute</h2>
+    <p>Element HTML yang menggunakan position absolute akan diposisikan relatif dengan element lain yang mendahuluinya yang terdekat,
+        bukan relatif terhadap layar secara normal.:
+    </p>
+
+    <div class="relative1">Element ini diatur menggunakan posisi: relative;
+        <div class="absolute">Element ini diatur menggunakan posisi: absolute;</div>
+    </div>
+    <br><br><br>
+    <br><br><br>
+
+    <h2>position: sticky;</h2>
+    <p>Cobalah untuk <b>scroll</b> untuk mengetahui bagaimana posisi sticky bekerja.</p>
+    <p>Catatan: IE/Edge 15 dan versi yang lebih lama tidak mendukung sticky.</p>
+    
+    <div class="sticky">Hola aku adalah sticky!</div>
+    <div style="padding-bottom:2000px">
+        <p>Dalama contoh ini, element sticky menempel pada posisi paling atas halaman (top:0),
+            ketika mencapai posisi scrollnya.
+        </p>
+        <p>Cobalah untuk melakukan scroll</p>
+        <p>Cobalah untuk melakukan scroll.. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ipsum numquam obcaecati nostrum impedit nesciunt perspiciatis id, aliquam asperiores rem eius. 
+            Ullam vel quae eaque ab magni quidem? Fuga, mollitia odio.</p>
+        <p>Cobalah untuk melakukan scroll.. Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Laborum aspernatur earum non labore facere, excepturi soluta voluptates, fugiat praesentium deleniti perferendis laudantium voluptatibus aliquam pariatur,
+            consectetur cumque sit optio quas.</p>
     </div>
 </body>
+
 </html>
