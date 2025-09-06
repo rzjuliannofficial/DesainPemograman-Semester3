@@ -23,9 +23,9 @@
             padding: 5px;
             display: grid;
             grid-template-areas: "header header"
-            "aside main"
-            "nav main"
-            "footer footer";
+                                 "aside main"
+                                 "nav main"
+                                 "footer footer";
             grid-template-columns: 1fr 1.5fr;
             grid-template-rows: 1fr 1fr 1.3fr;
         }
@@ -40,7 +40,12 @@
             grid-area: aside;
             background-color: #2F93FF;
             padding: 60px 0;
-        }  
+        }
+        nav {
+            grid-area: nav;
+            background-color: #e45765;
+            padding: 100px 0;
+        }
     </style>
 </head>
 <body>
