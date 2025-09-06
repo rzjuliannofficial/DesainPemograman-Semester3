@@ -13,9 +13,53 @@ body{
 /* Latihan 1 */
 .container-satu {
     display: flex;
-    width: 800px;
+    width: 1000px;
     margin: 50px auto;
     background-color: #fff;
     padding: 20px;
     box-sizing: border-box;
+}
+
+/* tugas */
+
+/* Sidebar Satu */
+.sidebar-satu {
+    order: 1;
+    background-color: #003a68;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+    padding: 0 20px;
+    background-color: #89cff1;
+    margin-right: 10px;
+}
+
+.sidebar-kedua {
+    flex: 1;
+    order: 3;
+    padding: 10px;
+    background-color:  #003a68;
+}
+
+.sidebar-satu ,
+.sidebar-kedua ,
+.kolom-utama h2{
+    color: white;
+}
+
+.sidebar-satu ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.gambar-konten{
+    text-align: center;
+}
+
+.gambar-konten img{
+    width: 200px;
 }
