@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percabangan Ternary</title>
+</head>
+<body>
+
+    <h2>Aplikasi Login Sederhana</h2>
+    <p>Silakan masukkan username dan password yang benar.</p>
+    <div id="pesan"></div>
+
+    <script>
+        // Menggunakan let karena nilai variabel akan berubah
+        let username = prompt("Username:");
+        let password = prompt("Password:");
+        let outputPesan = ""; // Variabel untuk menyimpan pesan hasil
+
+        // Percabangan if/else bersarang untuk autentikasi
+        if (username === "mahasiswa") {
+            // Jika username benar, periksa password
+            if (password === "kopi") {
+                outputPesan = "Selamat datang!";
+            } else {
+                outputPesan = "Password salah, coba lagi.";
+            }
+        } else {
+            // Jika username salah, langsung berikan pesan
+            outputPesan = "Anda tidak terdaftar!";
+        }
+
+        // Menampilkan pesan ke dalam elemen HTML
+        document.getElementById("pesan").innerHTML = `<h3>${outputPesan}</h3>`;
+    </script>
+
+</body>
+</html>
