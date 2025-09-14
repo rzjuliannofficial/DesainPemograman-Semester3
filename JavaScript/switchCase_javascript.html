@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percabangan switch/case</title>
+</head>
+<body>
+
+    <h2>Program Hadiah</h2>
+    <p>Silakan pilih hadiahmu dengan memasukkan angka 1 sampai 5. Hadiah yang kamu dapatkan akan muncul di bawah.</p>
+    <div id="result"></div>
+
+    <script>
+        // Menggunakan prompt untuk mendapatkan input dari pengguna
+        var jawab = prompt("Kamu beruntung! Silakan pilih hadiahmu dengan memasukkan angka 1 sampai 5:");
+
+        // Deklarasi variabel hadiah dengan nilai default
+        var hadiah = "Kamu gagal mendapat hadiah.";
+
+        // Menggunakan switch/case untuk menentukan hadiah
+        switch(jawab) {
+            case "1":
+                hadiah = "Tisu";
+                break;
+            case "2":
+                hadiah = "1 Kotak Kopi";
+                break;
+            case "3":
+                hadiah = "Sticker";
+                break;
+            case "4":
+                hadiah = "Minyak Goreng";
+                break;
+            case "5":
+                hadiah = "Uang Rp 50.000";
+                break;
+        }
+
+        // Memeriksa apakah hadiah berhasil didapatkan
+        if (hadiah !== "Kamu gagal mendapat hadiah.") {
+            document.getElementById("result").innerHTML = `<h3>Selamat kamu mendapatkan: ${hadiah}</h3>`;
+        } else {
+            document.getElementById("result").innerHTML = `<h3>${hadiah}</h3>`;
+        }
+    </script>
+
+</body>
+</html>
