@@ -14,7 +14,7 @@ echo "Hasil a - b = {$hasilKurang} <br>";
 echo "Hasil a * b = {$hasilKali} <br>";
 echo "Hasil a / b = {$hasilBagi} <br>";
 echo "Hasil a % b = {$sisaBagi} <br>";
-echo "Hasil a ** b = {$pangkat} <br>";
+echo "Hasil a ** b = {$pangkat} <br><br>";
 
 $hasilSama = $a == $b;
 $hasilTidakSama = $a != $b;
@@ -28,4 +28,13 @@ echo "Hasil a != b ?: {$hasilTidakSama}<br>";
 echo "Hasil a < b ?: {$hasilLebihKecil}<br>";
 echo "Hasil a > b ?: {$hasilLebihBesar}<br>";
 echo "Hasil a <= b ?: {$hasilLebihKecilSama}<br>";
-echo "Hasil a >= b ?: {$hasilLebihBesarSama}<br>";
+echo "Hasil a >= b ?: {$hasilLebihBesarSama}<br><br>";
+
+$hasilAnd = $a && $b;
+$hasilOr = $a || $b;
+$hasilNotA = !$a;
+$hasilNotB = !$b;
+echo "Hasil a && b ?: {$hasilAnd}<br>";
+echo "Hasil a || b ?: {$hasilOr}<br>";
+echo "Hasil !a ?: {$hasilNotA}<br>";
+echo "Hasil !b ?: {$hasilNotB}<br>";
