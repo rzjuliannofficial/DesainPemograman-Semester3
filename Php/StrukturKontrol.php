@@ -23,7 +23,7 @@ while ($jarakSaatIni < $jarakTarget) {
     $hari++;
 }
 
-echo "<br> Atlet tersebut memerlukan $hari hari untuk mencapai jarak 500 kilometer.";
+echo "<br> Atlet tersebut memerlukan $hari hari untuk mencapai jarak 500 kilometer.<br><br>";
 
 // Perulangan For
 $jumlahLahan = 10;
@@ -35,6 +35,18 @@ for ($i = 1; $i <= $jumlahLahan; $i++) {
     $jumlahBuah += ($tanamanPerLahan * $buahPerTanaman);
 }
 
-echo "Jumlah buah yang akan dipanen adalah: $jumlahBuah";
+echo "Jumlah buah yang akan dipanen adalah: $jumlahBuah <br><br>";
+
+
+//forEach
+$skorUjian = [85, 92, 78, 96, 88];
+$totalSkor = 0;
+
+foreach ($skorUjian as $skor) {
+    $totalSkor += $skor;
+}
+
+echo "Total skor ujian adalah: $totalSkor<br><br>";
+
 
 ?>
