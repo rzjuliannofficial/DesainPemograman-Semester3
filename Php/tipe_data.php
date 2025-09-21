@@ -12,4 +12,18 @@ echo "Variable b: {$d} <br>";
 echo "Variable b: {$e} <br>";
 
 var_dump($e);
+
+$namaDepan = "Ibnu";
+$namaBelakang = "Jakaria";
+
+$namaLengkap = "{$namaDepan} {$namaBelakang}";
+$namaLengkap2 = $namaDepan.' '.$namaBelakang;
+
+echo "<br> Nama Depan: {$namaDepan} <br>";
+echo 'Nama Belakang: ' . $namaBelakang . '<br>';
+
+echo $namaLengkap;
+
+$listMahasiswa = ["Wahid Abdullah" , "Elmo Bachtiar", "Lendis Fabri"];
+echo $listMahasiswa[0];
 ?>
