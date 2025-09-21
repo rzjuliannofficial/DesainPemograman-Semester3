@@ -54,3 +54,11 @@ $hasilIdentik = $a === $b;
 $hasilTidakIdentik = $a !== $b;
 echo "Hasil a === b : {$hasilIdentik}<br>";
 echo "Hasil a !== b : {$hasilTidakIdentik}<br><br>";
+
+//studi kasus
+$kursiTersedia = 45;
+$kursiTidakKosong = 28;
+$kursiKosong = $kursiTersedia - $kursiTidakKosong;
+
+$presentaseKursiKosong = ($kursiKosong*100) / $kursiTersedia ;
+echo "Presentase kursi kosong : {$presentaseKursiKosong}%";
