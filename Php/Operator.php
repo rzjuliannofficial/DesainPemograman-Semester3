@@ -40,12 +40,17 @@ echo "Hasil !a ?: {$hasilNotA}<br>";
 echo "Hasil !b ?: {$hasilNotB}<br><br>";
 
 $a += $b;
-$a -= $b;
-$a *= $b;
-$a /= $b;
-$a %= $b;
 echo "Hasil a += b : {$a}<br>";
+$a -= $b;
 echo "Hasil a -= b : {$a}<br>";
+$a *= $b;
 echo "Hasil a *= b : {$a}<br>";
+$a /= $b;
 echo "Hasil a /= b : {$a}<br>";
-echo "Hasil a %= b : {$a}<br>";
+$a %= $b;
+echo "Hasil a %= b : {$a}<br><br>";
+
+$hasilIdentik = $a === $b;
+$hasilTidakIdentik = $a !== $b;
+echo "Hasil a === b : {$hasilIdentik}<br>";
+echo "Hasil a !== b : {$hasilTidakIdentik}<br><br>";
