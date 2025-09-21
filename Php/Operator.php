@@ -37,4 +37,15 @@ $hasilNotB = !$b;
 echo "Hasil a && b ?: {$hasilAnd}<br>";
 echo "Hasil a || b ?: {$hasilOr}<br>";
 echo "Hasil !a ?: {$hasilNotA}<br>";
-echo "Hasil !b ?: {$hasilNotB}<br>";
+echo "Hasil !b ?: {$hasilNotB}<br><br>";
+
+$a += $b;
+$a -= $b;
+$a *= $b;
+$a /= $b;
+$a %= $b;
+echo "Hasil a += b : {$a}<br>";
+echo "Hasil a -= b : {$a}<br>";
+echo "Hasil a *= b : {$a}<br>";
+echo "Hasil a /= b : {$a}<br>";
+echo "Hasil a %= b : {$a}<br>";
