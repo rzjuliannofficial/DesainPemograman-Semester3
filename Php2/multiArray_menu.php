@@ -30,5 +30,6 @@ function displayMenu($menu) {
     echo "</ul>";
 }
 
-// Panggil fungsi untuk menampilkan menu displayMenu($menu);
+// Panggil fungsi untuk menampilkan menu 
+displayMenu($menu);
 ?>
