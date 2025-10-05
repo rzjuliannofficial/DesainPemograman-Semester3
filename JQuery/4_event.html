@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Praktikum jQuery Event</title>
+    <style>
+        #paragraf {
+            width: 600px;
+            height: 80px;
+            background-color: pink;
+            line-height: 80px;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Event 1: click
+            $("#paragraf").click(function() {
+                $("#paragraf").css("color", "white");
+            });
+
+            // Event 2: mouseover
+            $("#paragraf").mouseover(function() {
+                $("#paragraf").css("background-color", "silver");
+            });
+
+            // Event 3: mouseout
+            $("#paragraf").mouseout(function() {
+                $("#paragraf").css("background-color", "blue");
+            });
+
+            // Event 4: dblclick (double click)
+            $("#paragraf").dblclick(function() {
+                $("#paragraf").css("border", "solid 3px black");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="paragraf">Praktikum Minggu ke-4 JQuery</p>
+</body>
+</html>
