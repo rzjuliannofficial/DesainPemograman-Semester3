@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQuery DOM Manipulation Add/Remove</title>
+    <link rel="stylesheet" type="text/css" href="style/styleTable.css"/>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //menambah baris
+            $(".add-row").click(function(){
+                var name = $("#name").val();
+                var email = $("#email").val();
+                // Membuat markup baris baru (<tr>)
+                var markup = "<tr><td><input type='checkbox' name='record'></td><td>" 
+                             + name + "</td><td>" + email + "</td></tr>";
+                // Menambahkan markup ke dalam <tbody> tabel
+                $("table tbody").append(markup);
+            });
+            
+            //menghapus baris yang di centang
+            $(".delete-row").click(function() {
+                // Iterasi untuk setiap checkbox dengan name='record' yang dicentang
+                $("table tbody").find('input[name="record"]').each(function() {
+                    if($(this).is(":checked")) {
+                        $(this).parents("tr").remove(); // Menghapus elemen <tr> induk dari checkbox yang dicentang
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="email" placeholder="Email Address">
+        <input type="button" class="add-row" value="Add Row">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" name="record"></td>
+                <td>Tony Stark</td>
+                <td>tonystark@mail.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="delete-row">Delete Row</button>
+</body>
+</html>
