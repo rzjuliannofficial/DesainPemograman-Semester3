@@ -40,3 +40,14 @@ if (preg_match($pattern, $text, $matches)) {
     echo "Tidak ada yang cocok!";
 }
 echo "<br><br>";
+
+
+echo "--- Soal 5.5 (Kuantifier ?) ---<br>";
+$pattern = '/go?d/';
+$text = 'good is good.';
+if (preg_match($pattern, $text, $matches)) {
+    echo "Cocokkan: " . $matches[0]; // Output: Cocokkan: god
+} else {
+    echo "Tidak ada yang cocok!";
+}
+echo "<br><br>";
