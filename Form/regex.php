@@ -51,3 +51,14 @@ if (preg_match($pattern, $text, $matches)) {
     echo "Tidak ada yang cocok!";
 }
 echo "<br><br>";
+
+
+echo "--- Soal 5.6 (Kuantifier {n,m}) ---<br>";
+$pattern = '/go{2,3}d/'; // Cocokkan "good" (2 'o') atau "goood" (3 'o'). (Min 2, Max 3 'o')
+$text = 'goood is good.';
+if (preg_match($pattern, $text, $matches)) {
+    echo "Cocokkan: " . $matches[0]; // Output: Cocokkan: goood
+} else {
+    echo "Tidak ada yang cocok!";
+}
+?>
