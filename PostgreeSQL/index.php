@@ -11,6 +11,7 @@ $pass   = '123';
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$pass");
 
 if (!$conn) {
+    // Jika koneksi gagal, hentikan eksekusi dan tampilkan pesan error PostgreSQL
     die('Koneksi gagal: ' . pg_last_error());
 }
 
@@ -18,10 +19,10 @@ if (!$conn) {
 pg_set_client_encoding($conn, 'UTF8');
 
 // Ambil data dari tabel mahasiswa
-// Pakai alias agar array assoc tetap menggunakan key "Nama", "Nim", dst.
+// Menggunakan alias (AS) agar nama kolom tetap berformat PascalCase saat diambil
 $sql = "SELECT 
     \"Nim\"      AS \"Nim\",
-    \"Nama\"     AS \"Nama\",
+    \"Nama_Mhs\"     AS \"Nama\",
     \"Email\"    AS \"Email\",
     \"Jurusan\"  AS \"Jurusan\"
 FROM \"TB_Mahasiswa\"
@@ -30,11 +31,11 @@ ORDER BY \"Nim\"";
 $result = pg_query($conn, $sql);
 
 if (!$result) {
+    // Jika query gagal, hentikan eksekusi dan tampilkan pesan error PostgreSQL
     die('Query gagal: ' . pg_last_error($conn));
 }
 
 // Lanjutkan ke bagian HTML/tampilan
-// ... (Bagian HTML dimulai)
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +43,7 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Daftar Mahasiswa PostgreSQL</title>
 </head>
 <body>
     <h1>Daftar Mahasiswa</h1>
@@ -65,8 +66,8 @@ if (!$result) {
             <td><?php echo htmlspecialchars($row["Email"], ENT_QUOTES, 'UTF-8'); ?></td>
             <td><?php echo htmlspecialchars($row["Jurusan"], ENT_QUOTES, 'UTF-8'); ?></td>
             <td>
-                <a href="Edit.php?nim=<?php echo htmlspecialchars($row["Nim"]); ?>">Edit</a> | 
-                <a href="Hapus.php?nim=<?php echo htmlspecialchars($row["Nim"]); ?>" onclick="return confirm('Yakin ingin menghapus data ini?');">Hapus</a>
+                <a href="Edit.php?nim=<?php echo urlencode($row["Nim"]); ?>">Edit</a> | 
+                <a href="Hapus.php?nim=<?php echo urlencode($row["Nim"]); ?>" onclick="return confirm('Yakin ingin menghapus data ini?');">Hapus</a>
             </td>
         </tr>
         <?php $i++; ?>
@@ -74,8 +75,9 @@ if (!$result) {
     </table>
     
     <?php
-    // Bebaskan hasil & tutup koneksi (opsional)
+    // Bebaskan hasil query dari memori
     pg_free_result($result);
+    // Tutup koneksi ke database
     pg_close($conn);
     ?>
 
