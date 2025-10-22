@@ -3,7 +3,7 @@
 // --- KONFIGURASI KONEKSI POSTGRESQL ---
 $host   = 'localhost';
 $port   = '5432';
-$dbname = 'phpdatabase';
+$dbname = 'PhpDatabase';
 $user   = 'postgres';
 $pass   = '123';
 
