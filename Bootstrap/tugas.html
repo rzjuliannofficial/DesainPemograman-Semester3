@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Sederhana Bootstrap</title>
+    <!-- CDN CSS Bootstrap 4.5.2 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- 1. NAVBAR (Wajib) -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Website Tugas</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navSederhana" aria-controls="navSederhana" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navSederhana">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jumbo">Jumbotron</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gambar">Gambar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <!-- 2. JUMBOTRON (Wajib) -->
+        <div class="jumbotron" id="jumbo">
+            <h1 class="display-4">Ini Jumbotron Sederhana</h1>
+            <p class="lead">Contoh penggunaan komponen Bootstrap untuk menampilkan pesan penting.</p>
+            <hr class="my-4">
+            <a class="btn btn-info btn-lg" href="#" role="button">Tombol Info</a>
+        </div>
+
+        <h2 class="mb-4 text-center">Tiga Gambar Responsif</h2>
+        
+        <!-- 3. GAMBAR (Wajib) dalam Grid Sederhana -->
+        <div class="row text-center mb-5" id="gambar">
+            
+            <!-- Gambar 1: Rounded -->
+            <div class="col-sm-4 mb-3">
+                <img 
+                    src="tower.jpg"
+                    class="img-fluid rounded shadow" 
+                    alt="Gambar 1"
+                    onerror="this.onerror=null;this.src='https://placehold.co/300x200/cc0000/ffffff?text=Error';"
+                >
+            </div>
+
+            <!-- Gambar 2: Thumbnail -->
+            <div class="col-sm-4 mb-3">
+                <img 
+                    src="tower.jpg"
+                    class="img-fluid img-thumbnail shadow" 
+                    alt="Gambar 2"
+                    onerror="this.onerror=null;this.src='https://placehold.co/300x200/cc0000/ffffff?text=Error';"
+                >
+            </div>
+
+            <!-- Gambar 3: Circle -->
+            <div class="col-sm-4 mb-3">
+                <img 
+                    src="tower.jpg" 
+                    class="img-fluid rounded-circle shadow" 
+                    alt="Gambar 3"
+                >
+            </div>
+        </div>
+        
+    </div> <!-- Akhir Container -->
+
+    <!-- CDN JS Bootstrap (Wajib) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
