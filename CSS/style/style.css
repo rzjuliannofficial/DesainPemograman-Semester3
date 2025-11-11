@@ -1,5 +1,5 @@
 body{
-    background: url('/CSS/img/bunga2.jpg'), url('/CSS/img/bunga1.jpg');
+    background: url('../img/bunga2.jpg'), url('../img/bunga1.jpg');
     background-repeat: no-repeat, repeat;
     color: white;
 }
